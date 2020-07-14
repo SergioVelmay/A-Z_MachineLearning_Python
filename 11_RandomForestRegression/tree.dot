@@ -1,0 +1,30 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+graph [ranksep=equally, splines=polyline] ;
+edge [fontname=helvetica] ;
+0 [label="Level <= 7.0\nsamples = 6\nvalue = 199000.0", fillcolor="#f6d5bd"] ;
+1 [label="Level <= 4.5\nsamples = 4\nvalue = 98333.33", fillcolor="#fcf1ea"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label="Level <= 3.0\nsamples = 2\nvalue = 60000.0", fillcolor="#fefcfb"] ;
+1 -> 2 ;
+3 [label="samples = 1\nvalue = 50000.0", fillcolor="#ffffff"] ;
+2 -> 3 ;
+4 [label="samples = 1\nvalue = 80000.0", fillcolor="#fdf7f2"] ;
+2 -> 4 ;
+5 [label="Level <= 5.5\nsamples = 2\nvalue = 136666.67", fillcolor="#fae7d9"] ;
+1 -> 5 ;
+6 [label="samples = 1\nvalue = 110000.0", fillcolor="#fceee5"] ;
+5 -> 6 ;
+7 [label="samples = 1\nvalue = 150000.0", fillcolor="#f9e3d3"] ;
+5 -> 7 ;
+8 [label="Level <= 8.5\nsamples = 2\nvalue = 350000.0", fillcolor="#eeab7b"] ;
+0 -> 8 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+9 [label="samples = 1\nvalue = 300000.0", fillcolor="#f1b991"] ;
+8 -> 9 ;
+10 [label="samples = 1\nvalue = 500000.0", fillcolor="#e58139"] ;
+8 -> 10 ;
+{rank=same ; 0} ;
+{rank=same ; 1; 8} ;
+{rank=same ; 2; 5} ;
+{rank=same ; 3; 4; 6; 7; 9; 10} ;
+}
